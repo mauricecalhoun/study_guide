@@ -1,0 +1,446 @@
+{
+        "data_structures": {
+          "Linked List": {
+            "level": "B",
+            "url": "https://api.github.com/gists/e7ef1b26926a65e0b748021028dca906"
+          },
+          "Doubly Linked List": {
+            "level": "B",
+            "url": null
+          },
+          "Queue": {
+            "level": "B",
+            "url": null
+          },
+          "Stack": {
+            "level": "B",
+            "url": null
+          },
+          "Hash Table": {
+            "level": "B",
+            "url": null
+          },
+          "Heap": {
+            "level": "B",
+            "url": null
+          }, 
+          "Priority Queue": {
+            "level": "B",
+            "url": null
+          },
+          "Trie": {
+            "level": "A",
+            "url": null
+          },
+          "Binary Search Tree": {
+            "level": "A",
+            "url": null
+          },
+          "AVL Tree": {
+            "level": "A",
+            "url": null
+          },  
+          "Red-Black Tree": {
+            "level": "A",
+            "url": null
+          },
+          "Segment Tree": {
+            "level": "A",
+            "url": null
+          },
+          "Fenwick Tree": {
+            "level": "A",
+            "url": null
+          },                                     
+          "Graph": {
+            "level": "A",
+            "url": null
+          },  
+          "Disjoint Set": {
+            "level": "A",
+            "url": null
+          }, 
+          "Bloom Filter": {
+            "level": "A",
+            "url": null
+          }                                                                             
+        },
+        "algorithms" :{
+          "Math": {
+            "Bit Manipulation": {
+              "level": "B",
+              "url": null
+            }, 
+            "Binary Floating Point": {
+              "level": "B",
+              "url": null
+            },
+            "Factorial": {
+              "level": "B",
+              "url": null
+            },
+            "Fibonacci Number": {
+              "level": "B",
+              "url": null
+            },
+            "Prime Factors": {
+              "level": "B",
+              "url": null
+            }, 
+            "Primality Test": {
+              "level": "B",
+              "url": null
+            }, 
+            "Euclidean Algorithm": {
+              "level": "B",
+              "url": null
+            }, 
+            "Least Common Multiple": {
+              "level": "B",
+              "url": null
+            }, 
+            "Sieve of Eratosthenes": {
+              "level": "B",
+              "url": null
+            },
+            "Is Power of Two": {
+              "level": "B",
+              "url": null
+            },
+            "Pascal's Triangle": {
+              "level": "B",
+              "url": null
+            }, 
+            "Complex Number": {
+              "level": "B",
+              "url": null
+            },
+            "Radian & Degree": {
+              "level": "B",
+              "url": null
+            },
+            "Fast Powering": {
+              "level": "B",
+              "url": null
+            },
+            "Horner's method": {
+              "level": "B",
+              "url": null
+            },
+            "Matrices": {
+              "level": "B",
+              "url": null
+            },
+            "Euclidean Distance": {
+              "level": "B",
+              "url": null
+            }, 
+            "Integer Partition": {
+              "level": "A",
+              "url": null
+            }, 
+            "Square Root ": {
+              "level": "A",
+              "url": null
+            },
+            "Liu Hui π Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Discrete Fourier Transform": {
+              "level": "A",
+              "url": null
+            }                                                                                                                                                                      
+          },
+          "Sets": {
+            "Cartesian Product": {
+              "level": "B",
+              "url": null
+            },
+            "Fisher–Yates Shuffle": {
+              "level": "B",
+              "url": null
+            },
+            "Power Set": {
+              "level": "A",
+              "url": null
+            },
+            "Permutations": {
+              "level": "A",
+              "url": null
+            },
+            "Combinations": {
+              "level": "A",
+              "url": null
+            },
+            "Longest Common Subsequence": {
+              "level": "A",
+              "url": null
+            },
+            "Longest Increasing Subsequence": {
+              "level": "A",
+              "url": null
+            },
+            "Shortest Common Supersequence": {
+              "level": "A",
+              "url": null
+            },
+            "Knapsack Problem": {
+              "level": "A",
+              "url": null
+            },
+            "Maximum Subarray": {
+              "level": "A",
+              "url": null
+            },
+            "Combination Sum": {
+              "level": "A",
+              "url": null
+            }
+          },        
+          "Strings": {
+            "Hamming Distance": {
+              "level": "B",
+              "url": null
+            },
+            "Levenshtein Distance": {
+              "level": "A",
+              "url": null
+            },
+            "Knuth–Morris–Pratt Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Z Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Rabin Karp Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Longest Common Substring": {
+              "level": "A",
+              "url": null
+            },
+            "Regular Expression Matching": {
+              "level": "A",
+              "url": null
+            }
+          }, 
+          "Searches": {
+            "Linear Search": {
+              "level": "B",
+              "url": null
+            },
+            "Jump Search": {
+              "level": "B",
+              "url": null
+            },
+            "Binary Search": {
+              "level": "B",
+              "url": null
+            },
+            "Interpolation Search": {
+              "level": "B",
+              "url": null
+            }                                    
+         },                 
+          "Sorting": {
+            "Bubble Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Selection Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Insertion Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Heap Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Merge Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Quicksort": {
+              "level": "B",
+              "url": null
+            },
+            "Shellsort": {
+              "level": "B",
+              "url": null
+            },
+            "Counting Sort": {
+              "level": "B",
+              "url": null
+            },
+            "Radix Sort": {
+              "level": "B",
+              "url": null
+            }            
+          },
+          "Linked Lists": {
+            "Straight Traversal": {
+              "level": "B",
+              "url": null
+            },
+            "Reverse Traversal": {
+              "level": "B",
+              "url": null
+            }
+          }, 
+          "Trees": {
+            "Depth-First Search": {
+              "level": "B",
+              "url": null
+            },
+            "Breadth-First Search": {
+              "level": "B",
+              "url": null
+            }
+          },
+          "Graphs": {
+            "Depth-First Search": {
+              "level": "B",
+              "url": null
+            },
+            "Breadth-First Search": {
+              "level": "B",
+              "url": null
+            },
+            "Kruskal’s Algorithm": {
+              "level": "B",
+              "url": null
+            }, 
+            "Dijkstra Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Bellman-Ford Algorithm ": {
+              "level": "A",
+              "url": null
+            },  
+            "Floyd-Warshall Algorithm ": {
+              "level": "A",
+              "url": null
+            },
+            "Detect Cycle": {
+              "level": "A",
+              "url": null
+            }, 
+            "Prim’s Algorithm": {
+              "level": "A",
+              "url": null
+            },
+            "Topological Sorting": {
+              "level": "A",
+              "url": null
+            },
+            "Articulation Points": {
+              "level": "A",
+              "url": null
+            },
+            "Bridges": {
+              "level": "A",
+              "url": null
+            }, 
+            "Eulerian Path and Eulerian Circuit": {
+              "level": "A",
+              "url": null
+            },
+            "Hamiltonian Cycle": {
+              "level": "A",
+              "url": null
+            },
+            "Strongly Connected Components": {
+              "level": "A",
+              "url": null
+            },
+            "Travelling Salesman Problem": {
+              "level": "A",
+              "url": null
+            }                                                                      
+          }, 
+          "Cryptography": {
+            "Polynomial Hash ": {
+              "level": "B",
+              "url": null
+            },
+            "Rail Fence Cipher": {
+              "level": "B",
+              "url": null
+            },
+            "Caesar Cipher": {
+              "level": "B",
+              "url": null
+            },
+            "Hill Cipher": {
+              "level": "B",
+              "url": null
+            }
+          },
+          "Machine Learning": {
+            "NanoNeuron": {
+              "level": "B",
+              "url": null
+            },
+            "k-NN": {
+              "level": "B",
+              "url": null
+            },
+            "k-Means": {
+              "level": "B",
+              "url": null
+            }
+          },
+          "Image Processing": {
+            "Seam Carving": {
+              "level": "B",
+              "url": null
+            }
+          }, 
+          "Uncategorized": {
+            "Tower of Hanoi": {
+              "level": "B",
+              "url": null
+            },
+            "Square Matrix Rotation": {
+              "level": "B",
+              "url": null
+            },
+            "Jump Game": {
+              "level": "B",
+              "url": null
+            },  
+            "Unique Paths": {
+              "level": "B",
+              "url": null
+            },
+            "Rain Terraces": {
+              "level": "B",
+              "url": null
+            },
+            "Recursive Staircase": {
+              "level": "B",
+              "url": null
+            },
+            "Best Time To Buy Sell Stocks": {
+              "level": "B",
+              "url": null
+            },
+            "N-Queens Problem": {
+              "level": "A",
+              "url": null
+            },
+            "Knight's Tour": {
+              "level": "A",
+              "url": null
+            }                                              
+          }                                                            
+        }
+      }
