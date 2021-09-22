@@ -2,444 +2,444 @@
         "data_structures": {
           "Linked List": {
             "level": "B",
-            "file": "linked_list"
+            "id": "linked_list"
           },
           "Doubly Linked List": {
             "level": "B",
-            "file": "doubly_linked_list"
+            "id": null
           },
           "Queue": {
             "level": "B",
-            "file": null
+            "id": null
           },
           "Stack": {
             "level": "B",
-            "file": null
+            "id": null
           },
           "Hash Table": {
             "level": "B",
-            "file": null
+            "id": null
           },
           "Heap": {
             "level": "B",
-            "file": null
+            "id": null
           }, 
           "Priority Queue": {
             "level": "B",
-            "file": null
+            "id": null
           },
           "Trie": {
             "level": "A",
-            "file": null
+            "id": null
           },
           "Binary Search Tree": {
             "level": "A",
-            "file": null
+            "id": null
           },
           "AVL Tree": {
             "level": "A",
-            "file": null
+            "id": null
           },  
           "Red-Black Tree": {
             "level": "A",
-            "file": null
+            "id": null
           },
           "Segment Tree": {
             "level": "A",
-            "file": null
+            "id": null
           },
           "Fenwick Tree": {
             "level": "A",
-            "file": null
+            "id": null
           },                                     
           "Graph": {
             "level": "A",
-            "file": null
+            "id": null
           },  
           "Disjoint Set": {
             "level": "A",
-            "file": null
+            "id": null
           }, 
           "Bloom Filter": {
             "level": "A",
-            "file": null
+            "id": null
           }                                                                             
         },
         "algorithms" :{
           "Math": {
             "Bit Manipulation": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Binary Floating Point": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Factorial": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Fibonacci Number": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Prime Factors": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Primality Test": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Euclidean Algorithm": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Least Common Multiple": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Sieve of Eratosthenes": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Is Power of Two": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Pascal's Triangle": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Complex Number": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Radian & Degree": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Fast Powering": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Horner's method": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Matrices": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Euclidean Distance": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Integer Partition": {
               "level": "A",
-              "file": null
+              "id": null
             }, 
             "Square Root ": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Liu Hui π Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Discrete Fourier Transform": {
               "level": "A",
-              "file": null
+              "id": null
             }                                                                                                                                                                      
           },
           "Sets": {
             "Cartesian Product": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Fisher–Yates Shuffle": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Power Set": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Permutations": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Combinations": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Longest Common Subsequence": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Longest Increasing Subsequence": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Shortest Common Supersequence": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Knapsack Problem": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Maximum Subarray": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Combination Sum": {
               "level": "A",
-              "file": null
+              "id": null
             }
           },        
           "Strings": {
             "Hamming Distance": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Levenshtein Distance": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Knuth–Morris–Pratt Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Z Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Rabin Karp Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Longest Common Substring": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Regular Expression Matching": {
               "level": "A",
-              "file": null
+              "id": null
             }
           }, 
           "Searches": {
             "Linear Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Jump Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Binary Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Interpolation Search": {
               "level": "B",
-              "file": null
+              "id": null
             }                                    
          },                 
           "Sorting": {
             "Bubble Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Selection Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Insertion Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Heap Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Merge Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Quicksort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Shellsort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Counting Sort": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Radix Sort": {
               "level": "B",
-              "file": null
+              "id": null
             }            
           },
           "Linked Lists": {
             "Straight Traversal": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Reverse Traversal": {
               "level": "B",
-              "file": null
+              "id": null
             }
           }, 
           "Trees": {
             "Depth-First Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Breadth-First Search": {
               "level": "B",
-              "file": null
+              "id": null
             }
           },
           "Graphs": {
             "Depth-First Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Breadth-First Search": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Kruskal’s Algorithm": {
               "level": "B",
-              "file": null
+              "id": null
             }, 
             "Dijkstra Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Bellman-Ford Algorithm ": {
               "level": "A",
-              "file": null
+              "id": null
             },  
             "Floyd-Warshall Algorithm ": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Detect Cycle": {
               "level": "A",
-              "file": null
+              "id": null
             }, 
             "Prim’s Algorithm": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Topological Sorting": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Articulation Points": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Bridges": {
               "level": "A",
-              "file": null
+              "id": null
             }, 
             "Eulerian Path and Eulerian Circuit": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Hamiltonian Cycle": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Strongly Connected Components": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Travelling Salesman Problem": {
               "level": "A",
-              "file": null
+              "id": null
             }                                                                      
           }, 
           "Cryptography": {
             "Polynomial Hash ": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Rail Fence Cipher": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Caesar Cipher": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Hill Cipher": {
               "level": "B",
-              "file": null
+              "id": null
             }
           },
           "Machine Learning": {
             "NanoNeuron": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "k-NN": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "k-Means": {
               "level": "B",
-              "file": null
+              "id": null
             }
           },
           "Image Processing": {
             "Seam Carving": {
               "level": "B",
-              "file": null
+              "id": null
             }
           }, 
           "Uncategorized": {
             "Tower of Hanoi": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Square Matrix Rotation": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Jump Game": {
               "level": "B",
-              "file": null
+              "id": null
             },  
             "Unique Paths": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Rain Terraces": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Recursive Staircase": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "Best Time To Buy Sell Stocks": {
               "level": "B",
-              "file": null
+              "id": null
             },
             "N-Queens Problem": {
               "level": "A",
-              "file": null
+              "id": null
             },
             "Knight's Tour": {
               "level": "A",
-              "file": null
+              "id": null
             }                                              
           }                                                            
         }
