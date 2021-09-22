@@ -1,0 +1,46 @@
+{
+  "note": {
+    "title": "Blank",
+    "overview": {
+      "definitions": [
+        "You can put an array of sentences here,
+      ],
+      "images": [
+        {
+          "caption": "A singly linked list whose nodes contain two fields: an integer value and a link to the next node",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/2880px-Singly-linked-list.svg.png"
+        }
+      ],
+      "points": [
+        "List some key point here",
+      ]
+    },
+    "why": {
+      "points": [
+        "List why to use it here",
+      ]
+    },
+    "agruments": {
+      "pros": [
+        "State your arguments for the item"
+      ],
+      "cons": [
+        "State your arguments against the item"
+      ]
+    },
+    "analysis": [
+      {
+        "operation": "List method Here",
+        "notation": "Add Big O Notation",
+        "explanation": "Write a simple explanation"
+      },
+    ],
+    "techniques": [
+      {
+        "name": "Technique Name",
+        "definition": "List any special technique."
+      }
+    ],
+    "file": "Path to example file"
+  }
+}
