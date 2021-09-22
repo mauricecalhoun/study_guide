@@ -1,0 +1,376 @@
+<html>
+
+<head>
+  <title>Data Structures and Algorithms Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .scrolling-shadows {
+      background:
+        /* Shadow Cover */
+        linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+        linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+
+        /* Shadows */
+        radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+        radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+      background-attachment: local, local, scroll, scroll;
+    }
+
+    .scrolling-shadows-dark {
+      background:
+        /* Shadow Cover */
+        linear-gradient(transparent, rgba(255, 255, 255, 0)),
+        linear-gradient(rgba(255, 255, 255, 0), transparent) 0 100%,
+
+        /* Shadows */
+        radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)),
+        radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+      background-attachment: local, local, scroll, scroll;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="p-8 font-light w-3/5 m-auto" x-data="study_guide">
+    <template x-if="note != null">
+      <div>
+        <div class="flex items-center justify-between">
+          <h1 class="text-3xl font-bold" x-text="note.title"></h1>
+          <div class="relative inline-block text-left">
+            <div @click.prevent="open = !open">
+              <button type="button"
+                class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                id="menu-button" aria-expanded="true" aria-haspopup="true">
+                Data Structures and Algorithms Notes
+
+                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                  fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+
+            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+              x-transition:enter-start="transform opacity-0 scale-95"
+              x-transition:enter-end="transform opacity-100 scale-100"
+              x-transition:leave="transition ease-in duration-75"
+              x-transition:leave-start="transform opacity-100 scale-100"
+              x-transition:leave-end="transform opacity-0 scale-95" x-data="{selected: 'Data Structures'}"
+              class="w-full origin-top-right absolute right-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+              role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="pt" role="none">
+                <h3 class="px-4 py-2 text-xs font-bold uppercase text-gray-300 border-b border-gray-100"
+                  @click.prevent="selected == 'Data Structures' ? selected = null : selected = 'Data Structures'">Data
+                  Structures</h3>
+                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                <div class="h-48 overflow-x-hidden scrolling-shadows no-scrollbar text-gray-700"
+                  x-show="selected == 'Data Structures'" x-transition:enter.duration.500ms>
+                  <template x-for="(data, data_structure) in notes.data_structures">
+                    <div class="block px-4 py-2" :class="data.id ? 'text-gray-700' : 'text-gray-300'">
+                      <span x-text="data.level"
+                        class="text-sm px-2 inline-flex leading-5 font-normal rounded bg-opacity-50 bg-gray-200"></span>
+                      <a href="#" @click.prevent="getNotes(data.id)" class="text-sm" role="menuitem" tabindex="-1"
+                        x-text="data_structure"></a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <template x-for="(algorithms, type) in notes.algorithms">
+                <div class="pt-1" role="none">
+                  <h3 class="px-4 py-2 text-xs font-bold uppercase text-gray-300 border-b border-gray-100"
+                    x-text="'Algorithm: ' + type" @click.prevent="selected == type ? selected = null : selected = type">
+                  </h3>
+                  <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                  <div class="max-h-48 overflow-x-hidden scrolling-shadows no-scrollbar" x-show="selected == type"
+                    x-transition:enter.duration.500ms>
+                    <template x-for="(algorithm, name) in algorithms">
+                      <div class="block px-4 py-2" :class="algorithm.id ? 'text-gray-700' : 'text-gray-300'">
+                        <span x-text="algorithm.level"
+                          class="text-sm px-2 inline-flex leading-5 font-normal rounded bg-opacity-50 bg-gray-200"></span>
+                        <a href="#" @click.prevent="getNotes(algorithm.id)" class="text-sm" role="menuitem"
+                          tabindex="-1" x-text="name"></a>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 space-y-6">
+          <section class="space-y-4">
+            <h2 class="text-2xl font-bold">Overview:</h2>
+            <div class="space-y-4">
+              <template x-for="definition in note.overview.definitions">
+                <p x-html="definition"></p>
+              </template>
+            </div>
+
+            <div class="space-y-4">
+              <template x-for="image in note.overview.images">
+                <figure class="border space-y-2">
+                  <div class="p-2"><img :src="image.src"></div>
+                  <figcaption class="text-xs bg-gray-200 p-2" x-text="image.caption"></figcaption>
+                </figure>
+              </template>
+            </div>
+
+            <ul class="list-disc list-inside space-y-4 ml-4 ">
+              <template x-for="point in note.overview.points">
+                <li x-html="point"></li>
+              </template>
+            </ul>
+          </section>
+          <section class="space-y-4">
+            <h3 class="text-xl font-semibold">Why <span x-text="note.title"></span>?</h3>
+            <ul class="list-disc space-y-4 ml-4 ">
+              <template x-for="point in note.why.points">
+                <li x-html="point"></li>
+              </template>
+            </ul>
+          </section>
+          <section class="space-y-4">
+            <h3 class="text-xl font-semibold">Pros &amp; Cons</h3>
+            <div class="grid gap-4 grid-cols-2">
+              <div>
+                <h4 class="text-md font-semibold">Advantages of <span x-text="note.title"></span></h4>
+                <ul class="ml-4 list-disc space-y-4 mt-4">
+                  <template x-for="pro in note.agruments.pros">
+                    <li x-html="pro"></li>
+                  </template>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-md font-semibold">Disadvantages of <span x-text="note.title"></span></h4>
+                <ul class="ml-4 list-disc space-y-4 mt-4">
+                  <template x-for="con in note.agruments.cons">
+                    <li x-html="con"></li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="space-y-4">
+            <h4 class="text-xl font-semibold flex items-center justify-between">
+              <span>Big O Analysis</span>
+              <div class="text-xs space-x-2">
+                <template x-for="(style, name) in legends">
+                  <span class="font-normal text-sm px-2 inline-flex leading-5 rounded bg-opacity-50" :class="style"
+                    x-text="name"></span>
+                </template>
+              </div>
+            </h4>
+            <table class="divide-y divide-gray-200">
+              <thead class="">
+                <tr>
+                  <th scope="col" class="px-6 py-3 pl-0 text-left text-sm font-light text-gray-400  tracking-wider">
+                    Operation
+                  </th>
+                  <th scope="col" class="px-6 py-3 pl-0 text-left text-sm font-light text-gray-400  tracking-wider">
+                    Notation
+                  </th>
+                  <th scope="col" class="px-6 py-3 pl-0 text-left text-sm font-light text-gray-400  tracking-wider">
+                    Explanation
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <template x-for="item in note.analysis">
+                  <tr>
+                    <td class="px-6 py-4 pl-0 ">
+                      <div class="flex items-center">
+                        <div class="text-sm text-gray-900" x-text="item.operation"></div>
+                      </div>
+                    </td>
+                    <td class="px-6 py-4 pl-0 whitespace-nowrap">
+                      <div class="text-sm px-2 inline-flex leading-5 rounded bg-opacity-50"
+                        :class="notationColor(item.notation)" x-text="item.notation"></div>
+                    </td>
+                    <td class="px-6 py-4 pl-0">
+                      <div class="text-sm text-gray-900" x-text="item.explanation"></div>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </section>
+          <section class="space-y-4">
+            <h4 class="text-xl font-semibold">Code Implementation</h4>
+
+            <pre class="block whitespace-pre  bg-gray-100 p-6 rounded text-sm  text-gray-600 w-full"
+              x-html="code"></pre>
+          </section>
+          <section class="space-y-4">
+            <h4 class="text-xl font-semibold">Techniques</h4>
+            <dl class="space-y-4">
+              <template x-for="technique in note.techniques">
+                <div>
+                  <dt class="inline font-semibold" x-text="technique.name"></dt>
+                  <dd class="inline" x-text="technique.definition"></dd>
+                </div>
+              </template>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </template>
+    </template>
+    <template x-if="notes && !note">
+      <div class="flex items-center justify-end">
+        <div class="relative inline-block text-left">
+          <div @click.prevent="open = !open">
+            <button type="button"
+              class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+              id="menu-button" aria-expanded="true" aria-haspopup="true">
+              Data Structures and Algorithms Notes
+              <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+
+          <div x-show="open" x-transition:enter="transition ease-out duration-100"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95" x-data="{selected: 'Data Structures'}"
+            class="w-full origin-top-right absolute right-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="pt" role="none">
+              <h3 class="px-4 py-2 text-xs font-bold uppercase text-gray-300 border-b border-gray-100"
+                @click.prevent="selected == 'Data Structures' ? selected = null : selected = 'Data Structures'">Data
+                Structures</h3>
+              <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+              <div class="h-48 overflow-x-hidden scrolling-shadows no-scrollbar text-gray-700"
+                x-show="selected == 'Data Structures'" x-transition:enter.duration.500ms>
+                <template x-for="(data, data_structure) in notes.data_structures">
+                  <div class="block px-4 py-2" :class="data.id ? 'text-gray-700' : 'text-gray-300'">
+                    <span x-text="data.level"
+                      class="text-sm px-2 inline-flex leading-5 font-normal rounded bg-opacity-50 bg-gray-200"></span>
+                    <a href="#" @click.prevent="getNotes(data.id)" class="text-sm" role="menuitem" tabindex="-1"
+                      x-text="data_structure"></a>
+                  </div>
+                </template>
+              </div>
+            </div>
+            <template x-for="(algorithms, type) in notes.algorithms">
+              <div class="pt-1" role="none">
+                <h3 class="px-4 py-2 text-xs font-bold uppercase text-gray-300 border-b border-gray-100"
+                  x-text="'Algorithm: ' + type" @click.prevent="selected == type ? selected = null : selected = type">
+                </h3>
+                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                <div class="max-h-48 overflow-x-hidden scrolling-shadows no-scrollbar" x-show="selected == type"
+                  x-transition:enter.duration.500ms>
+                  <template x-for="(algorithm, name) in algorithms">
+                    <div class="block px-4 py-2" :class="algorithm.id ? 'text-gray-700' : 'text-gray-300'">
+                      <span x-text="algorithm.level"
+                        class="text-sm px-2 inline-flex leading-5 font-normal rounded bg-opacity-50 bg-gray-200"></span>
+                      <a href="#" @click.prevent="getNotes(algorithm.id)" class="text-sm" role="menuitem" tabindex="-1"
+                        x-text="name"></a>
+                    </div>
+                  </template>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</body>
+
+<script>
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("study_guide", () => ({
+      async init() {
+        this.notes = await this.fetch(this.notesUrl)
+      },
+      "notesUrl": "https://api.github.com/repos/mauricecalhoun/study_guide/contents/notes.json",
+      "notes": null,
+      "open": false,
+      "note": null,
+      "viewing": null,
+      async code() {
+        const path = `https://api.github.com/repos/mauricecalhoun/study_guide/contents/examples/${this.note.id}.code`
+        return await this.fetch(path);
+      },
+      "notations": {
+        "O(1)": "Excellent",
+        "O(log n)": "Good",
+        "O(n)": "Fair",
+        "O(n log n)": "Bad",
+        "O(n^2)": "Horrible",
+        "O(2^n)": "Horrible",
+        "O(n!)": "Horrible",
+      },
+      "legends": {
+        "Excellent": "bg-green-500",
+        "Good": "bg-green-200",
+        "Fair": "bg-yellow-200",
+        "Bad": "bg-yellow-500",
+        "Horrible": "bg-red-400",
+      },
+      notationColor(notation) {
+        return this.legends[this.notations[notation]];
+      },
+      async fetch(url){
+        const req = await fetch(url);
+        const results = await req.json();
+        const content = atob(results.content);
+
+        return this.isJson(content) ? JSON.parse(content) : content;
+      },
+      async getNotes(id) {
+        if (id) {
+          const path = `https://api.github.com/repos/mauricecalhoun/study_guide/contents/notes/${id}.json`
+          const result = await this.fetch(path);
+          this.note = result.note;
+          this.open = false;
+          this.viewing = this.note.title
+        }
+      },
+      isJson(item) {
+        item = typeof item !== "string"
+          ? JSON.stringify(item)
+          : item;
+
+        try {
+          item = JSON.parse(item);
+        } catch(e) {
+          return false;
+        }
+
+      if(typeof item === "object" && item !== null) {
+        return true;
+      }
+
+      return false;
+    }
+    }))
+  })
+</script>
+
+</html>
