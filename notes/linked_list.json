@@ -1,0 +1,66 @@
+{
+  "note": {
+    "title": "Linked List",
+    "overview": {
+      "definitions": [
+        "A Linked List is a linear data structure, where elements are stored at non-contiguous locations. A Linked list is like a chain made of <strong> nodes</strong> and the links are <strong> pointers</strong>.",
+        "<strong>Pointers are the connections</strong> that hold the pieces of linked structures together. Pointers represent the address of a location in memory."
+      ],
+      "images": [
+        {
+          "caption": "A singly linked list whose nodes contain two fields: an integer value and a link to the next node",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/2880px-Singly-linked-list.svg.png"
+        }
+      ],
+      "points": [
+        "Doubly Linked List: each node has two pointer, this allows you to go backwards and forward rather than one direction way in a linked list",
+        "Circularly Linked List, end node points to the front node"
+      ]
+    },
+    "why": {
+      "points": [
+        "They can be used to implement other common abstract data types, including lists, stacks, queues",
+        "preferred data structures over arrays because of elements can be easily inserted or removed without reallocation or reorganization of the entire structure"
+      ]
+    },
+    "agruments": {
+      "pros": [
+        "Dynamic Size (there is no need to ever resize a linked list)",
+        "Quick Insertion/ Deletion of Nodes because you just change the pointers of each node to insert/delete"
+      ],
+      "cons": [
+        "Very Slow when it comes to <strong>Access</strong> and <strong>Search</strong> we have to iterate over each element sequentially starting from the first node",
+        "Extra space for pointer"
+      ]
+    },
+    "analysis": [
+      {
+        "operation": "Insertion",
+        "notation": "O(1)",
+        "explanation": "you just change the pointers of each node to insert"
+      },
+      {
+        "operation": "Deletion",
+        "notation": "O(1)",
+        "explanation": "you just change the pointers of each node to delete"
+      },
+      {
+        "operation": "Access",
+        "notation": "O(n)",
+        "explanation": "we have to iterate over each element sequentially starting from the first node to access the target node"
+      },
+      {
+        "operation": "Search",
+        "notation": "O(n)",
+        "explanation": "we have to iterate over each element sequentially starting from the first node to access the target node"
+      }
+    ],
+    "techniques": [
+      {
+        "name": "Runner Technique",
+        "definition": "iterate through the linked list with two pointers simultaneously, with one ahead of the other. The \"fast\" node might be ahead by a fixed amount, or it might be hopping multiple nodes for each one node that the \"slow\" node iterates through."
+      }
+    ],
+    "gist": "https://api.github.com/gists/77c9204c9d89f0a8c0863abc60d68b13"
+  }
+}
