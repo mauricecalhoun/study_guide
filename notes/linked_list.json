@@ -10,11 +10,7 @@
         {
           "caption": "A singly linked list whose nodes contain two fields: an integer value and a link to the next node",
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/2880px-Singly-linked-list.svg.png"
-        },
-        {
-          "caption": "A singly linked list whose nodes contain two fields: an integer value and a link to the next node",
-          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/2880px-Singly-linked-list.svg.png"
-        }        
+        }       
       ],
       "points": [
         "Doubly Linked List: each node has two pointer, this allows you to go backwards and forward rather than one direction way in a linked list",
